@@ -33,14 +33,14 @@ console.log(getTotalTaxes.call(litva));
 // profit = salary - taxes;
 // для виводу в консоль кожні 10 секунд використайте setInterval
 function getMySalary(country) {
-    const min = 1500;
+    const min = 1000;
     const max = 2000;
-    const  salary = Math.floor(Math.random() * (max - min) + min);
+    const  salary = Math.round(Math.random() * (max - min) + min);
 const profit = {
     salary: salary,
-    taxes: this.taxes,
+    taxes: this.tax,
     profit: salary - this.tax
 }
     console.log(profit)
 }
-setInterval(()  => getMySalary.call(ukraine), 10000);
+setInterval(()  => getMySalary.call(ukraine), 6000);
